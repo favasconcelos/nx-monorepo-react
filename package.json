@@ -1,0 +1,48 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nx run app:serve",
+    "preview": "nx run app:preview",
+    "build": "nx run app:build",
+    "build:all": "nx run-many --target=build",
+    "test": "nx run app:test",
+    "test:all": "nx run-many --target=test",
+    "lint": "nx run app:lint",
+    "lint:all": "nx run-many --target=lint"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.10.0"
+  },
+  "devDependencies": {
+    "@nrwl/eslint-plugin-nx": "15.9.2",
+    "@nrwl/linter": "15.9.2",
+    "@nrwl/react": "15.9.2",
+    "@nrwl/vite": "15.9.2",
+    "@nrwl/workspace": "15.9.2",
+    "@testing-library/react": "14.0.0",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
+    "@vitejs/plugin-react": "3.1.0",
+    "@vitest/coverage-c8": "0.29.8",
+    "@vitest/ui": "0.29.8",
+    "eslint": "8.38.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "jsdom": "21.1.1",
+    "nx": "15.9.2",
+    "prettier": "2.8.7",
+    "react-test-renderer": "18.2.0",
+    "sass": "1.61.0",
+    "typescript": "5.0.4",
+    "vite": "4.2.1",
+    "vite-plugin-eslint": "1.8.1",
+    "vitest": "0.29.8"
+  }
+}

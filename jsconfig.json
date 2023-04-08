@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/landing-page": ["pages/landing-page/src"],
+      "@app/about-page": ["pages/about-page/src"],
+      "@app/shared": ["shared/src"],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

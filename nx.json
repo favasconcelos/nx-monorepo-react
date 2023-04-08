@@ -1,0 +1,70 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultProject": "app",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true,
+        "bundler": "vite",
+        "linter": "eslint",
+        "style": "scss"
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "linter": "eslint",
+        "style": "scss",
+        "unitTestRunner": "vitest"
+      }
+    }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[j]s?(x)?(.snap)",
+      "!{projectRoot}/.eslintrc.json"
+    ],
+    "sharedGlobals": []
+  },
+  "npmScope": "app",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test"
+        ]
+      },
+      "runner": "nx/tasks-runners/default"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "landing-page",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      },
+      "defaultConfiguration": "production",
+      "executor": "@nrwl/vite:build",
+      "options": {
+        "outputPath": "dist/landing-page"
+      },
+      "outputs": [
+        "{options.outputPath}"
+      ]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "pages/landing-page/**/*.{js,jsx}"
+        ]
+      },
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "options": {
+        "passWithNoTests": true
+      },
+      "outputs": [
+        "{projectRoot}/.coverage"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "overrides": [
+    {
+      "extends": [
+        "plugin:@nrwl/nx/javascript"
+      ],
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {}
+    }
+  ],
+  "plugins": [
+    "@nrwl/nx"
+  ],
+  "root": true
+}
